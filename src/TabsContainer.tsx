@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
+import { ReactNode, Dispatch, SetStateAction } from "react";
 import TabsContext from "./tabsContext";
 
 interface TabsContainerTypes {
   activeTab: string,
-  setActiveTab: () => void,
+  setActiveTab: Dispatch<SetStateAction<string>>,
   children: ReactNode
 }
 

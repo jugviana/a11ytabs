@@ -8,7 +8,7 @@ interface TabsContextTypes {
 
 const TabsContext = createContext<TabsContextTypes>({
   activeTab: "",
-  setActiveTab: (id: string) => {}
+  setActiveTab: (_id: string) => {}
 });
 
 export default TabsContext;
