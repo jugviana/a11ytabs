@@ -12,7 +12,6 @@ function App() {
 
   return (
     <>
-      <button>Hi</button>
       <h2 id="tabs-example">Tabs example</h2>
       <TabsContainer activeTab={activeTab} setActiveTab={setActiveTab}>
         <Tabs ariaLabelledBy="tabs-example">
@@ -39,7 +38,7 @@ function App() {
         </TabPanels>
       </TabsContainer>
 
-      <button>Bye</button>
+      
     </>
   );
 }
