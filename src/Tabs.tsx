@@ -5,9 +5,9 @@ interface TabsTypes {
   children: ReactNode
 }
 
-export default function Tabs({ ariaLabelledBy, children }: TabsTypes) {
+export default function Tabs({ ariaLabelledBy, children, ...rest }: TabsTypes) {
   return (
-    <div role="tablist" aria-labelledby={ariaLabelledBy}>
+    <div role="tablist" aria-labelledby={ariaLabelledBy} {...rest}>
       {children}
     </div>
   );

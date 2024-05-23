@@ -1,14 +1,13 @@
 import React, { ReactNode, useContext } from "react";
-import TabsContext from "./tabsContext";
+import TabsContext from "./TabsContext";
 
 interface TabTypes {
   id: string,
   controls: string,
-  children: ReactNode
-
+  children: ReactNode,
 }
 
-export default function Tab({ id, controls, children }: TabTypes) {
+export default function Tab({ id, controls, children, ...rest }: TabTypes) {
   const { activeTab, setActiveTab } = useContext(TabsContext);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
@@ -51,6 +50,7 @@ export default function Tab({ id, controls, children }: TabTypes) {
       onKeyDown={(e) => handleKeyDown(e)}
       id={id}
       aria-controls={controls}
+      {...rest}
     >
       {children}
     </button>

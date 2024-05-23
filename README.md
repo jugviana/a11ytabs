@@ -2,11 +2,19 @@
 
 A simple and accessible React library for creating tabs components.
 
+
+## Functionality
+A11yTabs ensures that your tabs are accessible and follow best practices for usability. It manages the active tab state, handles keyboard navigation, and maintains the appropriate ARIA attributes to enhance accessibility for users relying on assistive technologies. Here are the key features:
+
+- Accessible by default: Implements ARIA roles, properties to ensure the tabs are usable by screen readers.
+- Keyboard navigation: Supports navigation using the arrow keys, Tab, and Shift+Tab for switching between tabs and panels.
+- Flexible styling: The component is unstyled, allowing you to apply your custom styles to match your application's design.
+- React integration: Built for React, making it easy to integrate into your React applications.
+
 ## Installation
 
 ```
 npm install a11ytabs
-
 ```
 
 ## Usage
@@ -14,9 +22,13 @@ npm install a11ytabs
 Import the necessary components from the library:
 
 ```
-import React, { useState } from 'react';
 import { TabsContainer, Tabs, Tab, TabPanels, TabPanel } from "a11ytabs";
+```
 
+Define `useState` to control the active tab. Ensure proper connections between the `Tab` and `TabPanel` components using appropriate `IDs` and ARIA attributes.
+Each `Tab` component has an `id` and `controls` attribute that links it to the corresponding `TabPanel` through its `id` and `controlledBy` attributes.
+
+```
 function App() {
   const [activeTab, setActiveTab] = useState("tab0");
 

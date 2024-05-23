@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import TabsContainer from "./TabsContainer";
 import Tabs from "./Tabs";
 import Tab from "./Tab";
