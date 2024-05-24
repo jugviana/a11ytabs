@@ -36,8 +36,6 @@ function App() {
           </TabPanel>
         </TabPanels>
       </TabsContainer>
-
-      
     </>
   );
 }

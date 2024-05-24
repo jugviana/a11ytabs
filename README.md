@@ -1,19 +1,16 @@
 # A11yTabs Component
 
-A simple and accessible React library for creating tabs components.
+A typed and accessible tab component for React.
 
+## Key features
 
-## Functionality
-A11yTabs ensures that your tabs are accessible and follow best practices for usability. It manages the active tab state, handles keyboard navigation, and maintains the appropriate ARIA attributes to enhance accessibility for users relying on assistive technologies. Here are the key features:
-
-- Accessible by default: Implements ARIA roles, properties to ensure the tabs are usable by screen readers.
+- Accessible by default: Includes ARIA roles and properties to ensure the tabs are accessible to assistive technologies.
 - Keyboard navigation: Supports navigation using the arrow keys, Tab, and Shift+Tab for switching between tabs and panels.
 - Flexible styling: The component is unstyled, allowing you to apply your custom styles to match your application's design.
-- React integration: Built for React, making it easy to integrate into your React applications.
 
 ## Installation
 
-```
+```sh
 npm install a11ytabs
 ```
 
@@ -21,14 +18,15 @@ npm install a11ytabs
 
 Import the necessary components from the library:
 
-```
+```js
 import { TabsContainer, Tabs, Tab, TabPanels, TabPanel } from "a11ytabs";
 ```
 
-Define `useState` to control the active tab. Ensure proper connections between the `Tab` and `TabPanel` components using appropriate `IDs` and ARIA attributes.
-Each `Tab` component has an `id` and `controls` attribute that links it to the corresponding `TabPanel` through its `id` and `controlledBy` attributes.
+Define `useState` to control the active tab. Ensure proper connections between the `Tab` and `TabPanel` components using the appropriate attributes.
+Each `Tab` component has a `controls` attribute that references the corresponding `TabPanel`'s `id`.
+Each `TabPanel` component has a `controlledBy` attribute that references the corresponding `Tab`'s `id`.
 
-```
+```jsx
 function App() {
   const [activeTab, setActiveTab] = useState("tab0");
 
