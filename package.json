@@ -1,6 +1,6 @@
 {
-  "name": "tabs",
-  "description": "An accessible tab component",
+  "name": "a11ytabs",
+  "description": "A typed and accessible tab component for React",
   "private": true,
   "version": "0.0.0",
   "type": "module",
