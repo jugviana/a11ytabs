@@ -6,7 +6,22 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    // setupFiles: './src/setupTests.js', // Optional: If you have setup files
     include: ['src/**/*.{test,spec}.{js,ts,jsx,tsx}'],
+  },
+  build: {
+    lib: {
+      entry: './src/index.ts',
+      name: 'a11ytabs',
+      fileName: (format) => `index.${format}.js`,
+    },
+    rollupOptions: {
+      external: ['react', 'react-dom'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
+      },
+    },
   },
 })

@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 
-interface TabPanelsTypes {
-  children: ReactNode
+export interface TabPanelsProps {
+  children: ReactNode;
 }
 
-export default function TabPanels({ children }: TabPanelsTypes) {
+export default function TabPanels({ children }: TabPanelsProps) {
   return <div>{children}</div>;
 }

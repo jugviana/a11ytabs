@@ -1,40 +1,39 @@
 import React, { ReactNode, useContext } from "react";
 import TabsContext from "./TabsContext";
 
-interface TabTypes {
-  id: string,
-  controls: string,
-  children: ReactNode,
+export interface TabProps {
+  id: string;
+  controls: string;
+  children: ReactNode;
 }
 
-export default function Tab({ id, controls, children, ...rest }: TabTypes) {
+export default function Tab({ id, controls, children, ...rest }: TabProps) {
   const { activeTab, setActiveTab } = useContext(TabsContext);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
-    
-    const tabList = event.currentTarget.parentElement
+    const tabList = event.currentTarget.parentElement;
 
     if (event.code === "ArrowRight" || event.code === "ArrowDown") {
-      const nextTab = event.currentTarget.nextElementSibling as HTMLElement
+      const nextTab = event.currentTarget.nextElementSibling as HTMLElement;
       if (nextTab) {
         nextTab.focus();
         setActiveTab(nextTab.id);
       } else {
-        const firstElement = tabList?.firstElementChild as HTMLElement
-        firstElement.focus()
-        setActiveTab(firstElement.id)
-      
+        const firstElement = tabList?.firstElementChild as HTMLElement;
+        firstElement.focus();
+        setActiveTab(firstElement.id);
       }
     }
 
     if (event.code === "ArrowLeft" || event.code === "ArrowUp") {
-      const previousTab = event.currentTarget.previousElementSibling as HTMLElement
+      const previousTab = event.currentTarget
+        .previousElementSibling as HTMLElement;
       if (previousTab) {
         previousTab.focus();
         setActiveTab(previousTab.id);
       } else {
-        const lastChild = tabList?.lastElementChild as HTMLElement
-        lastChild.focus()
+        const lastChild = tabList?.lastElementChild as HTMLElement;
+        lastChild.focus();
         setActiveTab(lastChild.id);
       }
     }

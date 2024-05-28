@@ -1,11 +1,11 @@
-import { ReactNode} from "react";
+import { ReactNode } from "react";
 
-interface TabsTypes {
-  ariaLabelledBy: string,
-  children: ReactNode
+export interface TabsProps {
+  ariaLabelledBy: string;
+  children: ReactNode;
 }
 
-export default function Tabs({ ariaLabelledBy, children, ...rest }: TabsTypes) {
+export default function Tabs({ ariaLabelledBy, children, ...rest }: TabsProps) {
   return (
     <div role="tablist" aria-labelledby={ariaLabelledBy} {...rest}>
       {children}

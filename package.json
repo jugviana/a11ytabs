@@ -3,6 +3,8 @@
   "description": "A typed and accessible tab component for React",
   "private": true,
   "version": "0.0.0",
+  "license": "MIT",
+  "author": "Juliana Godoy Viana",
   "type": "module",
   "types": "./dist/index.d.ts",
   "scripts": {
