@@ -1,7 +1,7 @@
 {
   "name": "a11ytabs",
   "description": "A typed and accessible tab component for React",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "author": "Juliana Godoy Viana",
   "type": "module",
