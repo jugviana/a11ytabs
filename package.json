@@ -1,5 +1,5 @@
 {
-  "name": "a11ytabs",
+  "name": "a11ytabcomponent",
   "description": "A typed and accessible tab component for React",
   "version": "0.1.0",
   "license": "MIT",

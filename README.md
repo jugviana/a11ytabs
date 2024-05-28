@@ -1,4 +1,4 @@
-# A11yTabs
+# A11yTabComponent
 
 A typed and accessible tab component for React.
 
