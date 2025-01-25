@@ -11,7 +11,7 @@ A typed and accessible tab component for React.
 ## Installation
 
 ```sh
-npm install a11ytabs
+npm install a11ytabcomponent
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ npm install a11ytabs
 Import the necessary components from the library:
 
 ```js
-import { TabsContainer, Tabs, Tab, TabPanels, TabPanel } from "a11ytabs";
+import { TabsContainer, Tabs, Tab, TabPanels, TabPanel } from "a11ytabcomponent";
 ```
 
 Define `useState` to control the active tab. Ensure proper connections between the `Tab` and `TabPanel` components using the appropriate attributes.
