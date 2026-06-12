@@ -1,5 +1,5 @@
 import { ReactNode, useContext } from "react";
-import TabsContext from "./TabsContext";
+import TabsContext from "./tabsContext";
 
 export interface TabPanelProps {
   id: string;

@@ -1,5 +1,5 @@
 import { ReactNode, Dispatch, SetStateAction } from "react";
-import TabsContext from "./TabsContext";
+import TabsContext from "./tabsContext";
 
 export interface TabsContainerProps {
   activeTab: string;
